@@ -76,9 +76,8 @@ namespace l1t {
       layer1HCalFBUpper = 50,
       layer1HCalFBLower = 51,
       hiZDC = 52,
-      layer1ECalZS = 53,
-      layer1HCalZS = 54,
-      NUM_CALOPARAMNODES = 55
+	  netMetModel = 53,
+      NUM_CALOPARAMNODES = 54
     };
 
     CaloParamsHelper() { pnode_.resize(NUM_CALOPARAMNODES); }
@@ -488,6 +487,10 @@ namespace l1t {
     void setEtSumEcalSumCalibrationLUT(const l1t::LUT& lut) { pnode_[etSumEcalSumCalibration].LUT_ = lut; }
     void setMetPhiCalibrationLUT(const l1t::LUT& lut) { pnode_[metPhiCalibration].LUT_ = lut; }
     void setMetHFPhiCalibrationLUT(const l1t::LUT& lut) { pnode_[metHFPhiCalibration].LUT_ = lut; }
+
+	// Net MET
+    void setNetMetModelFile(std::string filename) { pnode_[netMetModel].type_ = filename; }
+    std::string netMetModelFile() const { return pnode_[netMetModel].type_; }
 
     // HI centrality
     int centralityRegionMask() const {
