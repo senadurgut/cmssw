@@ -50,9 +50,10 @@ caloStage2Params = L1Trigger.L1TCalorimeter.caloParams_cfi.caloParams.clone(
     etSumEtaMin             = [1, 1, 1, 1, 1],
     etSumEtaMax             = [28,  26, 28,  26, 28],
     etSumEtThreshold        = [0.,  30.,  0.,  30., 0.], # only 2nd (HT) and 4th (MHT) values applied
-    etSumMetPUSType         = "LUT", # et threshold from this LUT supercedes et threshold in line above
+    etSumMetPUSType         = "None", # et threshold from this LUT supercedes et threshold in line above
     etSumBypassEttPUS       = 1,
     etSumBypassEcalSumPUS   = 1,
+    etSumBypassMetPUS       = 1,
 
     etSumMetPUSLUTFile               = "L1Trigger/L1TCalorimeter/data/metPumLUT_2022_HCALOff_p5.txt",
 

@@ -77,7 +77,10 @@ namespace l1t {
       layer1HCalFBLower = 51,
       hiZDC = 52,
 	  netMetModel = 53,
-      NUM_CALOPARAMNODES = 54
+      NUM_CALOPARAMNODES = 54,
+      layer1ECalZS = 55, 
+      layer1HCalZS = 56
+
     };
 
     CaloParamsHelper() { pnode_.resize(NUM_CALOPARAMNODES); }
