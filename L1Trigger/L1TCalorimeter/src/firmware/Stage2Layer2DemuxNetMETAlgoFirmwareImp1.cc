@@ -49,7 +49,9 @@ void l1t::Stage2Layer2DemuxNetMETAlgoFirmwareImp1::processEvent(const std::vecto
   };
   std::vector<score_t> netmet = bdt_->decision_function(inputs);
 
-  // Replace met noHF with the NetMET
-  outputSums[7].setHwPt(netmet[0].to_int());
+  // Add NetMET as a new field to the output
+  l1t::EtSum netmetSum;
+  netmetSum.setHwPt(netmet[0].to_int());
+  outputSums.push_back(netmetSum);
 }
 
